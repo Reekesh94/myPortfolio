@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rikesh Giri — Full-Stack Developer</title>
+  <meta name="description" content="Rikesh Giri is a BCA student and aspiring Full-Stack Developer from Nepal, building modern web applications with React, Node.js, and Python." />
+  <meta name="keywords" content="Rikesh Giri, Full-Stack Developer, BCA Student, Nepal, React, Node.js, Python, Web Developer Portfolio" />
+  <meta name="author" content="Rikesh Giri" />
+  <meta property="og:title" content="Rikesh Giri — Full-Stack Developer" />
+  <meta property="og:description" content="BCA student building modern, scalable web apps with React, Node.js & Python." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: Outfit (display) + Plus Jakarta Sans (body) + Fira Code (mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════ LOADING SCREEN ═══════════ -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-logo">RG<span class="loader-accent">.</span></div>
+      <p class="loader-sub">Loading portfolio...</p>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ CURSOR ═══════════ -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <header class="navbar" id="navbar" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="#home" class="nav-logo" aria-label="Rikesh Giri Home">
+        <span class="logo-r">R</span><span class="logo-g">G</span><span class="logo-dot">.</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about"      class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills"     class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects"   class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Journey</a></li>
+        <li><a href="#contact"    class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#about"      class="mobile-link">About</a></li>
+        <li><a href="#skills"     class="mobile-link">Skills</a></li>
+        <li><a href="#projects"   class="mobile-link">Projects</a></li>
+        <li><a href="#experience" class="mobile-link">Journey</a></li>
+        <li><a href="#contact"    class="mobile-link">Contact</a></li>
+        <li><a href="#contact" class="btn btn-primary" style="width:100%;text-align:center;margin-top:.75rem;display:block;">Hire Me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section id="home" class="hero" aria-label="Hero">
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-orb orb-1" aria-hidden="true"></div>
+      <div class="hero-orb orb-2" aria-hidden="true"></div>
+      <div class="hero-orb orb-3" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <div class="hero-content reveal">
+          <div class="hero-eyebrow">
+            <span>🇳🇵 Based in Nepal</span>
+            <span class="eyebrow-sep">·</span>
+            <span class="eyebrow-status">
+              <span class="status-dot"></span>
+              Open to opportunities
+            </span>
+          </div>
+
+          <h1 class="hero-name">
+            <span class="name-hey">Hey, I'm</span>
+            <span class="name-big">Rikesh<br>Giri</span>
+          </h1>
+
+          <div class="hero-role-line">
+            <span class="rl-bracket">&lt;</span>
+            <span class="hero-typed" id="typedText" aria-live="polite"></span>
+            <span class="typed-cur" aria-hidden="true">_</span>
+            <span class="rl-bracket">/&gt;</span>
+          </div>
+
+          <p class="hero-desc">
+            Aspiring Full-Stack Developer on a mission to master full-stack web development. I build clean, performant applications, from database to deployment. Currently deep-diving into React, Node.js, and Python.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              See My Work <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              Get In Touch <i class="fas fa-paper-plane"></i>
+            </a>
+          </div>
+
+          <div class="hero-social-row">
+            <a href="https://www.facebook.com/rikesh.giri.501/" target="_blank"   rel="noopener    noreferrer" class="hs-link" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://github.com/Reekesh94" target="_blank" rel="noopener noreferrer" class="hs-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rikesh-giri-722287326/" target="_blank" rel="noopener noreferrer" class="hs-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:reekeshgiree@gmail.com" class="hs-link" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <span class="hs-divider"></span>
+            <span class="hs-email">reekeshgiree@gmail.com</span>
+          </div>
+        </div>
+
+        <!-- Terminal card -->
+        <div class="hero-visual reveal">
+          <div class="terminal">
+            <div class="term-bar">
+              <span class="tb-red"></span>
+              <span class="tb-yellow"></span>
+              <span class="tb-green"></span>
+              <span class="term-title">rikesh@portfolio ~ </span>
+            </div>
+            <div class="term-body">
+              <div class="term-line"><span class="t-prompt">$</span><span class="t-cmd"> whoami</span></div>
+              <div class="term-out"><span class="t-key">name</span><span class="t-op">:</span> <span class="t-str">"Rikesh Giri"</span></div>
+              <div class="term-out"><span class="t-key">role</span><span class="t-op">:</span> <span class="t-str">"Full-Stack Dev"</span></div>
+              <div class="term-out"><span class="t-key">study</span><span class="t-op">:</span> <span class="t-str">"BCA Student"</span></div>
+              <div class="term-out"><span class="t-key">from</span><span class="t-op">:</span> <span class="t-str">"Nepal 🇳🇵"</span></div>
+              <div class="term-out"><span class="t-key">status</span><span class="t-op">:</span> <span class="t-green">"open_to_work"</span></div>
+              <div class="term-gap"></div>
+              <div class="term-line"><span class="t-prompt">$</span><span class="t-cmd"> npm run start</span></div>
+              <div class="term-out t-comment">✓  Compiling skills...</div>
+              <div class="term-out t-comment">✓  Loading passion...</div>
+              <div class="term-out t-accent">✓  Ready for work!</div>
+              <div class="term-line"><span class="t-prompt">$</span><span class="t-blink">█</span></div>
+            </div>
+          </div>
+
+          <!-- Floating badges -->
+          <div class="ft-badge fb-1"><i class="fab fa-react"></i> React</div>
+          <div class="ft-badge fb-2"><i class="fab fa-node-js"></i> Node.js</div>
+          <div class="ft-badge fb-3"><i class="fab fa-python"></i> Python</div>
+          <div class="ft-badge fb-4"><i class="fas fa-database"></i> MongoDB</div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll to about">
+        <div class="sh-mouse"><div class="sh-wheel"></div></div>
+        <span>Scroll</span>
+      </a>
+    </section>
+
+    <!-- ═══════════ ABOUT ═══════════ -->
+    <section id="about" class="about section" aria-label="About">
+      <div class="container">
+        <div class="section-tag reveal">// about_me</div>
+        <div class="about-grid">
+
+          <div class="about-left reveal">
+            <div class="avatar-wrap">
+              <div class="avatar-ring-outer"></div>
+              <div class="avatar-box">
+                <img src="assets/photo.jpg" alt="Rikesh Giri" style="width:100%;height:100%;object-fit:cover;border-radius:22px;" />
+              </div>
+              <div class="av-badge"><i class="fas fa-code"></i> Dev</div>
+            </div>
+
+            <div class="info-pills">
+              <div class="info-pill">
+                <i class="fas fa-graduation-cap"></i>
+                <div><span class="ip-label">Education</span><span class="ip-val">BCA Student</span></div>
+              </div>
+              <div class="info-pill">
+                <i class="fas fa-map-marker-alt"></i>
+                <div><span class="ip-label">Location</span><span class="ip-val">Nepal 🇳🇵</span></div>
+              </div>
+              <div class="info-pill">
+                <i class="fas fa-circle" style="color:#22c55e;font-size:.55rem"></i>
+                <div><span class="ip-label">Status</span><span class="ip-val ip-green">Open to Work</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-right reveal">
+            <h2 class="section-heading">
+              Passionate Developer,<br/>
+              <em>Lifelong Learner</em>
+            </h2>
+            <p class="about-lead">
+              I'm Rikesh Giri — a Full-Stack Developer from Nepal with a deep passion for building things on the web. I write code that's not just functional, but clean, scalable, and a joy to maintain.
+            </p>
+            <p class="about-body">
+              My journey started when I built my first webpage and realized I could create anything I imagined with just a text editor. Since then, I've been relentlessly learning, diving deep into React, Node.js, Python, and databases.
+            </p>
+            <p class="about-body">
+              I'm the kind of developer who reads documentation for fun, obsesses over code quality, and always thinks about the person who'll maintain it next. Seeking opportunities to grow professionally and contribute to real-world products.
+            </p>
+
+            <div class="traits-grid">
+              <div class="trait"><i class="fas fa-bolt"></i> Fast Learner</div>
+              <div class="trait"><i class="fas fa-puzzle-piece"></i> Problem Solver</div>
+              <div class="trait"><i class="fas fa-users"></i> Team Player</div>
+              <div class="trait"><i class="fas fa-feather"></i> Detail Oriented</div>
+              <div class="trait"><i class="fas fa-rocket"></i> Self-Motivated</div>
+              <div class="trait"><i class="fas fa-code-branch"></i> Open Source Fan</div>
+            </div>
+
+            <div class="about-actions">
+              <a href="#" class="btn btn-primary" aria-label="Download CV">
+                <i class="fas fa-download"></i> Download CV
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                Let's Talk <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SKILLS ═══════════ -->
+    <section id="skills" class="skills section" aria-label="Skills">
+      <div class="container">
+        <div class="section-tag reveal">// tech_stack</div>
+        <h2 class="section-heading centered reveal">What I Work With</h2>
+        <p class="section-sub reveal">Technologies I've learned and actively use in my projects</p>
+
+        <div class="skills-grid">
+
+          <div class="skill-col reveal">
+            <div class="skill-group">
+              <div class="sg-header">
+                <div class="sg-ico"><i class="fas fa-laptop-code"></i></div>
+                <div><h3>Frontend</h3><p>Building responsive, interactive UIs</p></div>
+              </div>
+              <div class="sg-bars">
+                <div class="sbar"><div class="sb-info"><span><i class="fab fa-react"></i> React.js</span><span>90%</span></div><div class="sb-track"><div class="sb-fill" data-w="90"></div></div></div>
+                <div class="sbar"><div class="sb-info"><span><i class="fab fa-js"></i> JavaScript ES6+</span><span>85%</span></div><div class="sb-track"><div class="sb-fill" data-w="85"></div></div></div>
+                <div class="sbar"><div class="sb-info"><span><i class="fab fa-html5"></i> HTML5 / CSS3</span><span>88%</span></div><div class="sb-track"><div class="sb-fill" data-w="88"></div></div></div>
+                <div class="sbar"><div class="sb-info"><span><i class="fas fa-wind"></i> Tailwind CSS</span><span>75%</span></div><div class="sb-track"><div class="sb-fill" data-w="75"></div></div></div>
+                <div class="sbar"><div class="sb-info"><span><i class="fas fa-layer-group"></i> Next.js</span><span>60%</span></div><div class="sb-track"><div class="sb-fill" data-w="60"></div></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-col reveal">
+            <div class="skill-group">
+              <div class="sg-header">
+                <div class="sg-ico"><i class="fas fa-server"></i></div>
+                <div><h3>Backend</h3><p>Building APIs and server-side logic</p></div>
+              </div>
+              <div class="sg-bars">
+                <div class="sbar"><div class="sb-info"><span><i class="fab fa-node-js"></i> Node.js</span><span>82%</span></div><div class="sb-track"><div class="sb-fill" data-w="82"></div></div></div>
+                <div class="sbar"><div class="sb-info"><span><i class="fas fa-cube"></i> Express.js</span><span>80%</span></div><div class="sb-track"><div class="sb-fill" data-w="80"></div></div></div>
+                <div class="sbar"><div class="sb-info"><span><i class="fab fa-python"></i> Python</span><span>78%</span></div><div class="sb-track"><div class="sb-fill" data-w="78"></div></div></div>
+                <div class="sbar"><div class="sb-info"><span><i class="fas fa-leaf"></i> MongoDB</span><span>75%</span></div><div class="sb-track"><div class="sb-fill" data-w="75"></div></div></div>
+                <div class="sbar"><div class="sb-info"><span><i class="fas fa-table"></i> PostgreSQL</span><span>65%</span></div><div class="sb-track"><div class="sb-fill" data-w="65"></div></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-col reveal">
+            <div class="skill-group">
+              <div class="sg-header">
+                <div class="sg-ico"><i class="fas fa-tools"></i></div>
+                <div><h3>Tools & Others</h3><p>Dev workflows & platforms</p></div>
+              </div>
+              <div class="sg-bars">
+                <div class="sbar"><div class="sb-info"><span><i class="fab fa-git-alt"></i> Git & GitHub</span><span>88%</span></div><div class="sb-track"><div class="sb-fill" data-w="88"></div></div></div>
+                <div class="sbar"><div class="sb-info"><span><i class="fas fa-terminal"></i> Linux / CLI</span><span>72%</span></div><div class="sb-track"><div class="sb-fill" data-w="72"></div></div></div>
+                <div class="sbar"><div class="sb-info"><span><i class="fas fa-vial"></i> REST APIs / Postman</span><span>85%</span></div><div class="sb-track"><div class="sb-fill" data-w="85"></div></div></div>
+                <div class="sbar"><div class="sb-info"><span><i class="fas fa-palette"></i> Figma</span><span>65%</span></div><div class="sb-track"><div class="sb-fill" data-w="65"></div></div></div>
+                <div class="sbar"><div class="sb-info"><span><i class="fab fa-docker"></i> Docker (learning)</span><span>45%</span></div><div class="sb-track"><div class="sb-fill" data-w="45"></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Currently Learning -->
+        <div class="learning-banner reveal">
+          <div class="lb-icon"><i class="fas fa-book-open"></i></div>
+          <div>
+            <span class="lb-title">Currently Learning</span>
+            <div class="lb-tags">
+              <span>TypeScript</span>
+              <span>AWS / Cloud</span>
+              <span>Docker & K8s</span>
+              <span>System Design</span>
+              <span>GraphQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PROJECTS ═══════════ -->
+    <section id="projects" class="projects section" aria-label="Projects">
+      <div class="container">
+        <div class="section-tag reveal">// my_projects</div>
+        <h2 class="section-heading centered reveal">Things I've Built</h2>
+        <p class="section-sub reveal">Projects I've built while learning and growing as a developer</p>
+
+        <div class="pf-filters reveal" role="group" aria-label="Filter projects">
+          <button class="pf-btn active" data-filter="all">All</button>
+          <button class="pf-btn" data-filter="fullstack">Full-Stack</button>
+          <button class="pf-btn" data-filter="frontend">Frontend</button>
+          <button class="pf-btn" data-filter="backend">Backend</button>
+          <button class="pf-btn" data-filter="python">Python</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+
+          <article class="project-card reveal" data-category="fullstack">
+            <div class="pc-img" style="background:linear-gradient(135deg,#0a0520,#1a0a40)">
+              <div class="pci-mock">
+                <div class="pm-bar"><span></span><span></span><span></span></div>
+                <div class="pm-body">
+                  <div class="pm-sidebar"></div>
+                  <div class="pm-main"><div class="pm-line w80"></div><div class="pm-cards"><div></div><div></div><div></div></div></div>
+                </div>
+              </div>
+              <div class="pc-overlay">
+                <a href="#" class="pco-btn">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="pco-btn pco-ghost">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="pc-body">
+              <div class="pc-meta"><span class="pc-tag">Full-Stack</span><span class="pc-star">⭐ Featured</span></div>
+              <h3>Student Task Manager</h3>
+              <p>Full-stack productivity app for students to manage assignments and deadlines. Features user auth, real-time dashboard, and progress tracking.</p>
+              <div class="pc-stack"><span>React</span><span>Node.js</span><span>MongoDB</span><span>JWT</span></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="fullstack">
+            <div class="pc-img" style="background:linear-gradient(135deg,#001a10,#003825)">
+              <div class="pci-mock">
+                <div class="pm-bar"><span></span><span></span><span></span></div>
+                <div class="pm-body"><div class="pm-main"><div class="pm-grid4"><div></div><div></div><div></div><div></div></div></div></div>
+              </div>
+              <div class="pc-overlay">
+                <a href="#" class="pco-btn">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="pco-btn pco-ghost">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="pc-body">
+              <div class="pc-meta"><span class="pc-tag">Full-Stack</span></div>
+              <h3>E-Shop Nepal</h3>
+              <p>E-commerce platform with product listing, cart management, checkout flow, and admin dashboard. Integrated with eSewa payment gateway for Nepal.</p>
+              <div class="pc-stack"><span>React</span><span>Express</span><span>MongoDB</span><span>eSewa</span></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="frontend">
+            <div class="pc-img" style="background:linear-gradient(135deg,#00101a,#002038)">
+              <div class="pci-mock">
+                <div class="pm-bar"><span></span><span></span><span></span></div>
+                <div class="pm-body" style="justify-content:center;align-items:center;display:flex;flex-direction:column;gap:6px">
+                  <div class="pm-sun"></div>
+                  <div style="font-size:1.2rem;font-weight:700;color:#fff;font-family:monospace">24°C</div>
+                  <div class="pm-line w60"></div>
+                </div>
+              </div>
+              <div class="pc-overlay">
+                <a href="#" class="pco-btn">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="pco-btn pco-ghost">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="pc-body">
+              <div class="pc-meta"><span class="pc-tag">Frontend</span></div>
+              <h3>Weather Dashboard</h3>
+              <p>A clean weather app using OpenWeatherMap API. Shows current conditions, 5-day forecast, and location search with a beautiful animated UI.</p>
+              <div class="pc-stack"><span>React</span><span>OpenWeather API</span><span>CSS3</span></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="backend">
+            <div class="pc-img" style="background:linear-gradient(135deg,#1a0800,#3a1500)">
+              <div class="pci-mock">
+                <div class="pm-bar"><span></span><span></span><span></span></div>
+                <div class="pm-body" style="padding:10px;font-family:monospace;font-size:9px;">
+                  <div style="color:#a78bfa;margin-bottom:4px">GET  /api/users → 200 OK</div>
+                  <div style="color:#86efac;margin-bottom:4px">POST /api/auth  → 201</div>
+                  <div style="color:#fbbf24;margin-bottom:4px">PUT  /api/posts → 200</div>
+                  <div style="color:#f87171">DEL  /api/item  → 204</div>
+                </div>
+              </div>
+              <div class="pc-overlay">
+                <a href="#" class="pco-btn">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="pco-btn pco-ghost">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="pc-body">
+              <div class="pc-meta"><span class="pc-tag">Backend</span></div>
+              <h3>Blog REST API</h3>
+              <p>A fully documented RESTful API for a blogging platform with JWT auth, CRUD operations, rate limiting, and input validation middleware.</p>
+              <div class="pc-stack"><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>JWT</span></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="python">
+            <div class="pc-img" style="background:linear-gradient(135deg,#0d1a00,#1f3800)">
+              <div class="pci-mock">
+                <div class="pm-bar"><span></span><span></span><span></span></div>
+                <div class="pm-body"><div class="pm-main"><div class="pm-line w70"></div><div class="pm-barchart"><div style="height:50%"></div><div style="height:75%"></div><div style="height:40%"></div><div style="height:90%"></div><div style="height:55%"></div></div></div></div>
+              </div>
+              <div class="pc-overlay">
+                <a href="#" class="pco-btn">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="pco-btn pco-ghost">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="pc-body">
+              <div class="pc-meta"><span class="pc-tag">Python</span></div>
+              <h3>Expense Tracker CLI</h3>
+              <p>A command-line expense tracker with SQLite persistence, category management, monthly reports, and CSV export. My first Python project!</p>
+              <div class="pc-stack"><span>Python</span><span>SQLite</span><span>Matplotlib</span><span>Click</span></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="frontend">
+            <div class="pc-img" style="background:linear-gradient(135deg,#140020,#280040)">
+              <div class="pci-mock">
+                <div class="pm-bar"><span></span><span></span><span></span></div>
+                <div class="pm-body" style="align-items:center;justify-content:center;display:flex;flex-direction:column;gap:6px">
+                  <div style="width:28px;height:28px;border-radius:50%;background:rgba(167,139,250,0.5);"></div>
+                  <div class="pm-line w60"></div>
+                  <div class="pm-line w40"></div>
+                </div>
+              </div>
+              <div class="pc-overlay">
+                <a href="#" class="pco-btn">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="pco-btn pco-ghost">GitHub <i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="pc-body">
+              <div class="pc-meta"><span class="pc-tag">Frontend</span></div>
+              <h3>Portfolio Website v1</h3>
+              <p>My very first portfolio — built with pure HTML, CSS, and vanilla JS. Where I learned DOM manipulation, CSS animations, and responsive design from scratch.</p>
+              <div class="pc-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="more-projects reveal">
+          <a href="https://github.com/Reekesh94" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <i class="fab fa-github"></i> View All Projects on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ JOURNEY ═══════════ -->
+    <section id="experience" class="experience section" aria-label="Journey">
+      <div class="container">
+        <div class="section-tag reveal">// my_journey</div>
+        <h2 class="section-heading centered reveal">Education & Experience</h2>
+
+        <div class="journey-tabs reveal" role="tablist">
+          <button class="jt-btn active" data-tab="education" role="tab" aria-selected="true">
+            <i class="fas fa-graduation-cap"></i> Education
+          </button>
+          <button class="jt-btn" data-tab="work" role="tab" aria-selected="false">
+            <i class="fas fa-briefcase"></i> Experience
+          </button>
+          <button class="jt-btn" data-tab="certs" role="tab" aria-selected="false">
+            <i class="fas fa-certificate"></i> Certifications
+          </button>
+        </div>
+
+        <!-- Education -->
+        <div class="timeline" id="tab-education">
+          <div class="tl-item reveal">
+            <div class="tl-dot tl-current"></div>
+            <div class="tl-card">
+              <div class="tlc-top">
+                <div class="tlc-ico"><i class="fas fa-university"></i></div>
+                <div class="tlc-info">
+                  <h3>Bachelor of Computer Applications (BCA)</h3>
+                  <p>Tribhuvan University, Nepal</p>
+                </div>
+                <span class="tlc-date">2024 — Present</span>
+              </div>
+              <p>Currently in 2nd year. Studying Data Structures, Algorithms, Database Management, OS, and Web Technologies. Maintaining strong academic performance while working on personal projects.</p>
+              <div class="tlc-tags"><span class="tlt-active">Ongoing</span><span>CGPA: -- / 4.0</span></div>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tlc-top">
+                <div class="tlc-ico"><i class="fas fa-school"></i></div>
+                <div class="tlc-info">
+                  <h3>+2 Science </h3>
+                  <p>Kanchanjunga English Higher Secondary School, Nepal</p>
+                </div>
+                <span class="tlc-date">2020 — 2022</span>
+              </div>
+              <p>Completed higher secondary with Computer Science focus. Wrote my first programs here and fell in love with coding. Scored 78% in board exams.</p>
+              <div class="tlc-tags"><span>Completed</span><span>GPA: 3.00 / 4.0</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work -->
+        <div class="timeline hidden" id="tab-work">
+          <div class="tl-item reveal">
+            <div class="tl-dot tl-current"></div>
+            <div class="tl-card">
+              <div class="tlc-top">
+                <div class="tlc-ico"><i class="fas fa-laptop"></i></div>
+                <div class="tlc-info">
+                  <h3>Freelance Web Developer</h3>
+                  <p>Self-employed / Remote</p>
+                </div>
+                <span class="tlc-date">2023 — Present</span>
+              </div>
+              <p>Building websites and web apps for local businesses and individuals in Nepal. Completed 5+ projects including business landing pages, portfolio sites, and small e-commerce stores.</p>
+              <div class="tlc-tags"><span class="tlt-active">Ongoing</span><span>React</span><span>Node.js</span></div>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tlc-top">
+                <div class="tlc-ico"><i class="fas fa-users"></i></div>
+                <div class="tlc-info">
+                  <h3>Web Dev Club Lead</h3>
+                  <p>College Tech Club</p>
+                </div>
+                <span class="tlc-date">2023 — Present</span>
+              </div>
+              <p>Leading the web development club at college. Organizing workshops, hackathons, and coding sessions. Teaching HTML, CSS, and JavaScript fundamentals to junior students.</p>
+              <div class="tlc-tags"><span class="tlt-active">Ongoing</span><span>Leadership</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certs -->
+        <div class="timeline hidden" id="tab-certs">
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tlc-top">
+                <div class="tlc-ico"><i class="fab fa-react"></i></div>
+                <div class="tlc-info"><h3>The Complete React Developer</h3><p>Udemy — Andrew Mead</p></div>
+                <span class="tlc-date">2023</span>
+              </div>
+              <p>40+ hours covering hooks, context, Redux, React Router, and testing. Built 3 major projects as curriculum deliverables.</p>
+              <div class="tlc-tags"><span>React</span><span>Redux</span><span>Testing</span></div>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tlc-top">
+                <div class="tlc-ico"><i class="fab fa-node-js"></i></div>
+                <div class="tlc-info"><h3>Node.js, Express & MongoDB Bootcamp</h3><p>Udemy — Jonas Schmedtmann</p></div>
+                <span class="tlc-date">2023</span>
+              </div>
+              <p>REST APIs, authentication, authorization, security, performance, and deployment best practices. One of the best Node.js courses available.</p>
+              <div class="tlc-tags"><span>Node.js</span><span>Express</span><span>MongoDB</span></div>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tlc-top">
+                <div class="tlc-ico"><i class="fab fa-python"></i></div>
+                <div class="tlc-info"><h3>Python for Everybody Specialization</h3><p>Coursera — University of Michigan</p></div>
+                <span class="tlc-date">2022</span>
+              </div>
+              <p>5-course Python specialization covering basics, data structures, web access, databases, and data visualization.</p>
+              <div class="tlc-tags"><span>Python</span><span>SQL</span><span>Data</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section id="contact" class="contact section" aria-label="Contact">
+      <div class="container">
+        <div class="section-tag reveal">// get_in_touch</div>
+        <h2 class="section-heading centered reveal">Let's Work Together</h2>
+        <p class="section-sub reveal">Open to internships, freelance projects, collaborations, or just a friendly chat about tech!</p>
+
+        <div class="contact-grid">
+          <div class="contact-left reveal">
+            <div class="avail-card">
+              <div class="avail-emoji">👋</div>
+              <h3>Available For</h3>
+              <ul class="avail-list">
+                <li><i class="fas fa-check"></i> Internship opportunities</li>
+                <li><i class="fas fa-check"></i> Freelance web projects</li>
+                <li><i class="fas fa-check"></i> Open-source collaboration</li>
+                <li><i class="fas fa-check"></i> Part-time remote work</li>
+                <li><i class="fas fa-check"></i> Tech tutoring / mentoring</li>
+              </ul>
+            </div>
+
+            <div class="contact-links">
+              <a href="mailto:reekeshgiree@gmail.com" class="contact-link">
+                <div class="cl-ico"><i class="fas fa-envelope"></i></div>
+                <div><span class="cl-lbl">Email me</span><span class="cl-val">reekeshgiree@gmail.com</span></div>
+                <i class="fas fa-external-link-alt cl-arr"></i>
+              </a>
+
+            <a href="https://facebook.com/rikesh.giri.501/" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <div class="cl-ico"><i class="fab fa-facebook-f"></i></div>
+              <div>
+                <span class="cl-lbl">Facebook</span>
+                <span class="cl-val">facebook.com/rikesh.giri.501/</span>
+              </div>
+              <i class="fas fa-external-link-alt cl-arr"></i>
+            </a>
+
+              <a href="https://github.com/Reekesh94" target="_blank" rel="noopener noreferrer" class="contact-link">
+                <div class="cl-ico"><i class="fab fa-github"></i></div>
+                <div><span class="cl-lbl">GitHub</span><span class="cl-val">github.com/Reekesh94</span></div>
+                <i class="fas fa-external-link-alt cl-arr"></i>
+              </a>
+
+              <a href="https://linkedin.com/in/rikesh-giri-722287326/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                <div class="cl-ico"><i class="fab fa-linkedin-in"></i></div>
+                <div><span class="cl-lbl">LinkedIn</span><span class="cl-val">linkedin.com/in/rikesh-giri-722287326/</span></div>
+                <i class="fas fa-external-link-alt cl-arr"></i>
+              </a>
+
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" novalidate aria-label="Contact form">
+            <div class="cf-title">Send a Message 💬</div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Your Name *</label>
+                <input type="text" id="fname" name="fname" placeholder="John Doe" required autocomplete="name" />
+                <span class="form-error" id="fnameError" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="john@email.com" required autocomplete="email" />
+                <span class="form-error" id="emailError" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Reaching out about...</label>
+              <select id="subject" name="subject">
+                <option value="">Select a reason</option>
+                <option value="internship">Internship Offer</option>
+                <option value="freelance">Freelance Project</option>
+                <option value="collab">Collaboration</option>
+                <option value="hire">Full-time Opportunity</option>
+                <option value="other">Just saying hi! 👋</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, opportunity, or just say hi! I read every message 🙏" required></textarea>
+              <span class="form-error" id="messageError" role="alert"></span>
+              <span class="char-count" id="charCount">0 / 500</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+
+            <div class="form-success hidden" id="formSuccess" role="status" aria-live="polite">
+              <i class="fas fa-check-circle"></i>
+              Sent! I'll reply within 24 hours 🙏
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <span class="logo-r">R</span><span class="logo-g">G</span><span class="logo-dot">.</span>
+          </a>
+          <p>Rikesh Giri — Full-Stack Developer from Nepal 🇳🇵</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Journey</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer-socials">
+          <a href="https://facebook.com/rikesh.giri.501/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://github.com/Reekesh94" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/rikesh-giri-722287326/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:rikeshgiree@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Rikesh Giri · Built with 💜 and lots of ☕ from Nepal</p>
+        <a href="#home" class="back-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
