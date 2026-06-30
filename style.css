@@ -6,12 +6,18 @@
 
 /* ── CSS Variables ──────────────────────────────── */
 :root {
-  --bg:         #07071a;
+  /* --bg:         #07071a;
   --bg-2:       #0c0c24;
   --bg-3:       #10102e;
   --card:       #0e0e28;
   --surface:    #14143a;
-  --surface-2:  #1c1c48;
+  --surface-2:  #1c1c48; */
+  --bg:          #0e0e0e;
+  --bg-2:        #111111;
+  --bg-3:        #161616;
+  --card:        #141414;
+  --surface:     #1a1a1a;
+  --surface-2:   #222222;
   --border:     rgba(255,255,255,0.06);
   --border-h:   rgba(139,92,246,0.4);
 
@@ -19,19 +25,20 @@
   --text-2:     #9898c8;
   --text-3:     #5a5a88;
 
-  --accent:     #8b5cf6;        /* Electric violet */
-  --accent-b:   #a78bfa;        /* Lighter violet */
-  --accent-d:   rgba(139,92,246,0.12);
+
+  --accent:      #e8c547;      /* warm gold */
+  --accent-b:    #c84b3c;      /* deep red */
+  --accent-d:   rgba(232,197,71,0.12);
   --accent-g:   rgba(139,92,246,0.25);
-  --accent-2:   #06b6d4;        /* Cyan secondary */
-  --accent-2d:  rgba(6,182,212,0.12);
+  --accent-2:   #c84b3c;        /* Cyan secondary */
+  --accent-2d:  rgba(200,75,60,0.1);
 
   --green:      #22c55e;
   --error:      #f87171;
 
-  --ff-display: 'Outfit', sans-serif;
-  --ff-body:    'Plus Jakarta Sans', sans-serif;
-  --ff-mono:    'Fira Code', monospace;
+  --ff-display:  'Playfair Display', Georgia, serif;
+  --ff-body:     'DM Sans', system-ui, sans-serif;
+  --ff-mono:     'JetBrains Mono', 'Courier New', monospace;
 
   --r:          10px;
   --r-lg:       18px;
